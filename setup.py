@@ -10,7 +10,7 @@ setup(
     author_email='well1912@gmail.com',
 
     package_dir={'': 'src'},
-    py_modules=['sum_terms.py'],
+    py_modules=['sum_terms'],
     install_requires=[],
     extras_require={'test': ['pytest', 'pytest-watch', 'tox']},
 )

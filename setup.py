@@ -8,6 +8,9 @@ setup(
     version='0.1.0',
     author='Justin Lange',
     author_email='well1912@gmail.com',
+
+    package_dir={'': 'src'},
+    py_modules=['sum_terms.py'],
     install_requires=[],
     extras_require={'test': ['pytest', 'pytest-watch', 'tox']},
 )

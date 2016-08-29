@@ -12,5 +12,5 @@ setup(
     package_dir={'': 'src'},
     py_modules=['sum_terms'],
     install_requires=[],
-    extras_require={'test': ['pytest', 'pytest-watch', 'tox']},
+    extras_require={'test': ['pytest', 'pytest-watch', 'pytest-cov', 'tox']},
 )

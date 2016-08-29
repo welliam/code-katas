@@ -1,9 +1,5 @@
 from __future__ import unicode_literals
-
-
-class Stack(list):
-    # so the code below works
-    push = list.append
+from data_structures.stack import Stack
 
 
 def proper_parenthetics(s):

@@ -20,11 +20,11 @@ PARENS_TABLE = [
 
 @pytest.mark.parametrize('parens, output', PARENS_TABLE)
 def test_proper_parenthetics(parens, output):
-    from proper_parens import proper_parenthetics
+    from .proper_parens import proper_parenthetics
     assert proper_parenthetics(parens) == output
 
 
 @pytest.mark.parametrize('parens, output', PARENS_TABLE)
 def test_proper_parenthetics_2(parens, output):
-    from proper_parens import proper_parenthetics_2
+    from .proper_parens import proper_parenthetics_2
     assert proper_parenthetics_2(parens) == output

@@ -1,4 +1,4 @@
-from data_structures.priority_queue import PriorityQueue
+from .data_structures.priority_queue import PriorityQueue
 
 
 card_ord = 'A23456789TJQK'

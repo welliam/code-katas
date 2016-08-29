@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from data_structures.stack import Stack
+from .data_structures.stack import Stack
 
 
 def proper_parenthetics(s):

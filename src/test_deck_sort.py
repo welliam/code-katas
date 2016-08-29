@@ -13,3 +13,9 @@ INPUTS = [  # some from code-katas
 def test_deck_sort(unsorted_deck, sorted_deck):
     from deck_sort import deck_sort
     assert deck_sort(unsorted_deck) == list(sorted_deck)
+
+
+@pytest.mark.parametrize('unsorted_deck, sorted_deck', INPUTS)
+def test_deck_sort2(unsorted_deck, sorted_deck):
+    from deck_sort import deck_sort2
+    assert deck_sort2(unsorted_deck) == list(sorted_deck)

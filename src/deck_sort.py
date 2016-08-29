@@ -12,3 +12,7 @@ def deck_sort(t):
     for _ in t:
         result.append(pq.pop())
     return result
+
+
+def deck_sort2(t):
+    return [p[1] for p in sorted(map(lambda c: (card_ord.find(c), c), t))]

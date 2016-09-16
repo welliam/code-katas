@@ -30,6 +30,11 @@ def fake_airports():
         airport='heaven',
         destination_airports=[],
         lat_lon=[7, 7]
+    ), dict(
+        city='my house',
+        airport='my house',
+        destination_airports=[],
+        lat_lon=[float('inf'), float('inf')]
     )]
 
 
@@ -71,3 +76,10 @@ def test_shortest_distance_distance(fake_airports):
     from .flight_paths import shortest_distance
     path, distance = shortest_distance('purgatory', 'heaven', fake_airports)
     assert distance < 1000
+
+
+def test_shortest_distance_no_path(fake_airports):
+    """Test shortest distance raises error when given unconnected airports."""
+    from .flight_paths import shortest_distance
+    with pytest.raises(ValueError):
+        print(shortest_distance('hell', 'my house', fake_airports))

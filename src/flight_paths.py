@@ -41,9 +41,12 @@ def get_city_from_airport(airport, airports):
 def shortest_distance(c1, c2, airports=get_airports()):
     """Return the shortest flight between two airports."""
     g = make_airport_graph(airports)
-    distance, path = min([
+    distance, airport_path = min([
         g.shortest_path(a1['airport'], a2['airport'])[::-1]
         for a1 in get_airports_in_city(c1, airports)
         for a2 in get_airports_in_city(c2, airports)
     ])
-    return ([get_city_from_airport(a, airports) for a in path], distance)
+    city_path = [get_city_from_airport(a, airports) for a in airport_path]
+    if c1 not in city_path or c2 not in city_path:
+        raise ValueError('No path exists between cities.')
+    return (city_path, distance)

@@ -1,6 +1,6 @@
 import json
-from data_structures.graph import Graph
-from calculate_distance import calculate_distance
+from .data_structures.graph import Graph
+from .calculate_distance import calculate_distance
 
 
 AIRPORTS_FILE = 'static/cities_with_airports.json'

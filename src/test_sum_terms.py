@@ -12,5 +12,5 @@ SUM_TERMS_TABLE = [
 @pytest.mark.parametrize('n, terms_sum', SUM_TERMS_TABLE)
 def test_max_size(n, terms_sum):
     """Test sum of the first nth terms kata"""
-    from sum_terms import series_sum
+    from .sum_terms import series_sum
     assert series_sum(n) == terms_sum

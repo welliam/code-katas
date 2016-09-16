@@ -15,3 +15,9 @@ def flight_path_info():
 @pytest.mark.parametrize('key', CITY_KEYS)
 def test_flight_paths_have_keys(flight_path_info, key):
     assert all(map(lambda c: key in c, flight_path_info))
+
+
+def test_flight_path_make_graph(flight_path_info):
+    from flight_paths import make_flight_graph
+    assert len(make_flight_graph(flight_path_info).nodes())
+

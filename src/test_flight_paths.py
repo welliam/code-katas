@@ -15,6 +15,7 @@ def airport_info():
 
 @pytest.fixture
 def fake_airports():
+    """Airports for testing."""
     return [dict(
         city='purgatory',
         airport='purgatory',

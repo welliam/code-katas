@@ -4,4 +4,4 @@ My katas from Codewars.
 
 The flight_paths.py file includes a function `shortest_distance` which
 can be used to determine the shortest path between two cities. It
-returns a path made up of cities.
+returns a path made up of cities and the associated distance.

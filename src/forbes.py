@@ -19,7 +19,15 @@ def oldest_under_80(billionares):
 
 def youngest(billionares):
     """Returns the youngest member of billionares."""
-    youngest = None
+    young = None
     for b in filter(lambda b: b['age'] > -1, billionares):
-        youngest = b if (not youngest or b['age'] < youngest['age']) else youngest
-    return youngest
+        young = b if (not young or b['age'] < young['age']) else young
+    return young
+
+
+if __name__ == '__main__':
+    billionaires = load_forbes()
+    print('Youngest billionaire: {}'.format(youngest(billionaires)['name']))
+    print('Oldest billionaire under 80: {}'.format(
+        oldest_under_80(billionaires)['name']
+    ))

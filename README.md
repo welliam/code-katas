@@ -5,3 +5,6 @@ My katas from Codewars.
 The flight_paths.py file includes a function `shortest_distance` which
 can be used to determine the shortest path between two cities. It
 returns a path made up of cities and the associated distance.
+
+The forbes.py program contains loads the top 40 richest people and
+returns the oldest under 80 and the youngest billionaire.

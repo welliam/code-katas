@@ -15,3 +15,11 @@ def oldest_under_80(billionares):
     for b in filter(lambda b: b['age'] < 80, billionares):
         oldest = b if (not oldest or b['age'] > oldest['age']) else oldest
     return oldest
+
+
+def youngest(billionares):
+    """Returns the youngest member of billionares."""
+    youngest = None
+    for b in filter(lambda b: b['age'] > -1, billionares):
+        youngest = b if (not youngest or b['age'] < youngest['age']) else youngest
+    return youngest

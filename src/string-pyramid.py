@@ -1,3 +1,8 @@
+"""Solve string pyramid exercise from code katas.
+http://www.codewars.com/kata/string-pyramid/train/python
+"""
+
+
 def watch_pyramid_from_the_side(characters):
     """A pyramid built from the input as view from the side."""
     if not characters:
